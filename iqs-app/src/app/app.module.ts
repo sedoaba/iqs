@@ -19,10 +19,13 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './pages/login/login.component';
+import { WebserviceService } from './services/webservice.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdbValidationModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [WebserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
