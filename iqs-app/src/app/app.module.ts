@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,10 +19,18 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './pages/login/login.component';
+import { WebserviceService } from './services/webservice.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +50,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    NgxSpinnerModule
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [WebserviceService, HttpClientModule],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
