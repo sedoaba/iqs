@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardhomeComponent } from './dashboardhome/dashboardhome.component';
 import { SidebarModule } from '../sidebar/sidebar.module';
+import { NavModule } from '../shared/nav/nav.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SidebarModule } from '../sidebar/sidebar.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SidebarModule
+    SidebarModule,
+    NavModule
   ]
 })
 export class DashboardModule { }
