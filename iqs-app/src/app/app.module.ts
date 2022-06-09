@@ -25,6 +25,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.c
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    DashboardModule
 
   ],
   providers: [WebserviceService, HttpClientModule],
