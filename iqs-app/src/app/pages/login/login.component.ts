@@ -36,8 +36,7 @@ export class LoginComponent implements OnInit {
         if (recordsets.id) {
           this.spinner.hide();
           localStorage.setItem('userData', JSON.stringify(recordsets));
-          alert(recordsets);
-          //this.router.navigate(['/dashboard']);
+           this.router.navigate(['dashboard']);
         } else {
           this.spinner.hide();
           alert(recordsets);
